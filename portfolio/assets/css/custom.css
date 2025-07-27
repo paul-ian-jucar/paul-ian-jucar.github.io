@@ -1,0 +1,22 @@
+.nav-link {
+    color: #fff;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-link:visited {
+    color: #fff;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background: #232323;
+    color: #fff;
+}
+
+.nav-link.active {
+    background: #fff;
+    color: #161616;
+    border-color: #161616;
+    font-weight: 600;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+}
