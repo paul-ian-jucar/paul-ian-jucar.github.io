@@ -38,3 +38,21 @@ const scrollSpy = new bootstrap.ScrollSpy(document.querySelector('.px-5'), {
     target: '#sideNav',
     offset: 0
 });
+
+// Online/Offline status handling
+function updateOnlineStatus() {
+    const statusIndicator = document.getElementById('status-indicator');
+    if (navigator.onLine) {
+        statusIndicator.innerHTML = '<i class="online-indicator"></i>Online';
+    } else {
+        statusIndicator.innerHTML = '<i class="offline-indicator"></i>Offline';
+    }
+}
+
+// Add event listeners for online/offline events
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+
+// Initial status check
+updateOnlineStatus();
+
