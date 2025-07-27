@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jucar</title>
 
+    <!-- Performance optimizations -->
+    <link rel="preload" href="assets/me.jpg" as="image">
     <meta name="theme-color" content="#0d6efd">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -39,8 +41,8 @@
             <aside class="sidebar d-flex flex-column align-items-center bg-black vh-100 p-3"
                 style="width: 260px; min-width: 260px;" id="sidebar">
 
-                <img src="assets/me.jpg" alt="Logo" class="rounded-circle my-3"
-                    style="width: 180px; height: 180px; object-fit: cover;">
+                <img src="assets/me.jpg" alt="Profile Picture" class="rounded-circle my-3" width="180" height="180"
+                    loading="eager" fetchpriority="high" style="object-fit: cover;">
 
                 <nav class="nav flex-column w-100 flex-grow-1 my-4 gap-2" id="sideNav">
                     <a class="nav-link p-2 rounded active" href="#homepage">Homepage</a>
@@ -53,8 +55,8 @@
                 <div class="w-100 border-top pt-2">
                     <div class="bg-dark text-white d-flex align-items-center justify-content-center py-3">
                         <div class="position-relative">
-                            <img src="assets/me.jpg" alt="Logo" class="rounded-circle border mx-3"
-                                style="width: 40px; height: 40px; object-fit: cover;">
+                            <img src="assets/me.jpg" alt="Profile Picture Small" class="rounded-circle border mx-3"
+                                width="40" height="40" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="flex-grow-1">
                             <div class="fw-semibold">Paul Ian Jucar</div>
@@ -67,17 +69,91 @@
             <div class="col main-content bg-dark" style="min-height: 100vh;">
                 <div class="d-flex justify-content-between align-items-center p-3 sticky-top bg-dark">
                     <!-- Mobile menu toggle button -->
-                    <button class="btn btn-outline-light mobile-toggle d-md-none" type="button" id="sidebarToggle">
-                        <i class="bi bi-list"></i>
+                    <button class="btn btn-outline-light mobile-toggle d-md-none" type="button" id="sidebarToggle"
+                        aria-label="Toggle navigation menu">
+                        <i class="bi bi-list" aria-hidden="true"></i>
                     </button>
                 </div>
 
                 <div class="px-3 px-sm-5" data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="0" tabindex="0"
                     style="scroll-behavior: smooth;">
-                    <section id="homepage" class="pt-5 mb-5" style="min-height: 100vh;">
-                        <h1 class="text-white text-md-start mb-5">Home page</h1>
-                        <p class="text-white">Welcome to the homepage section. Scroll down to see more sections.</p>
+                    <section id="homepage" class="pt-5 mb-5">
+                        <div class="row align-items-center mb-5">
+                            <div class="col-lg-8">
+                                <h1 class="text-white display-4 fw-bold mb-4">Full Stack Developer</h1>
+                                <p class="text-white-50 mb-4">Passionate about creating efficient, scalable, and
+                                    user-friendly web applications. Specialized in modern web technologies and best
+                                    practices in software development.</p>
+                                <div class="d-flex gap-3">
+                                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                                    <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mb-5">
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="p-4 rounded bg-black bg-opacity-50 text-white">
+                                    <i class="bi bi-code-square fs-3 text-primary"></i>
+                                    <h3 class="h5 mb-3">Modern Development</h3>
+                                    <p class="mb-0 text-white-50">Building responsive and performant web applications
+                                        using the latest technologies.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <div class="p-4 rounded bg-black bg-opacity-50 text-white">
+                                    <i class="bi bi-brush fs-3 mb-3 text-primary"></i>
+                                    <h3 class="h5 mb-3">Clean Design</h3>
+                                    <p class="mb-0 text-white-50">Creating intuitive user interfaces with attention to
+                                        detail and user experience.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-4">
+                                <div class="p-4 rounded bg-black bg-opacity-50 text-white">
+                                    <i class="bi bi-diagram-3 fs-3 mb-3 text-primary"></i>
+                                    <h3 class="h5 mb-3">Architecture</h3>
+                                    <p class="mb-0 text-white-50">Designing scalable solutions with focus on
+                                        maintainability and best practices.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4">
+                            <h2 class="text-white">Featured Projects</h2>
+                            <div class="col-md-6">
+                                <div class="card bg-black bg-opacity-50 border-0 h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">E-Commerce Platform</h5>
+                                        <p class="card-text text-white-50">A full-stack e-commerce solution built with
+                                            Laravel and Vue.js. Features include real-time inventory management, payment
+                                            integration, and admin dashboard.</p>
+                                        <div class="d-flex gap-2 mb-3">
+                                            <span class="badge bg-primary">Laravel</span>
+                                            <span class="badge bg-primary">Vue.js</span>
+                                            <span class="badge bg-primary">MySQL</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-light btn-sm">View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-black bg-opacity-50 border-0 h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Task Management System</h5>
+                                        <p class="card-text text-white-50">A collaborative task management application
+                                            with real-time updates, team management, and progress tracking features.</p>
+                                        <div class="d-flex gap-2 mb-3">
+                                            <span class="badge bg-primary">React</span>
+                                            <span class="badge bg-primary">Node.js</span>
+                                            <span class="badge bg-primary">MongoDB</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-light btn-sm">View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
+
                     <section id="projects" class="pt-5 mb-5" style="min-height: 100vh;">
                         <h1 class="text-white text-md-start mb-5">Projects</h1>
                         <p class="text-white">Here are some dummy projects:</p>
@@ -112,9 +188,16 @@
                         </ul>
                     </section>
                 </div>
+
+                <button class="btn btn-primary text-white rounded-circle" id="back-to-top" data-bs-toggle="tooltip"
+                    data-bs-placement="left" title="Back to Top" aria-label="Scroll back to top">
+                    <i class="bi bi-arrow-up fs-5" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </div>
+
+
 
 
     <!-- [JQuery] -->
@@ -127,6 +210,13 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/indicator.js"></script>
     <script src="service-worker.js"></script>
+
+    <!-- Tooltips -->
+    <script>
+        $(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>

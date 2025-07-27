@@ -1,4 +1,24 @@
 $(document).ready(function () {
+    // Back to top button functionality
+    const $backToTop = $('#back-to-top');
+
+    // Hide the button initially
+    $backToTop.hide();
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $backToTop.fadeIn(300);
+        } else {
+            $backToTop.fadeOut(300);
+        }
+    });
+
+    $backToTop.click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 600, 'easeOutCubic');
+        return false;
+    });
+
+    // Mobile sidebar toggle functionalitydocument).ready(function () {
     // Mobile sidebar toggle functionality
     const $sidebar = $('#sidebar');
     const $sidebarOverlay = $('#sidebarOverlay');
