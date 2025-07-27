@@ -1,3 +1,7 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+}
+
 .nav-link {
     color: #fff;
     transition: background 0.2s, color 0.2s;
@@ -19,4 +23,51 @@
     border-color: #161616;
     font-weight: 600;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.main-content {
+    margin-left: 220px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .sidebar {
+        left: -220px;
+        transition: left 0.3s ease;
+        width: 220px !important;
+        min-width: 220px !important;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+        display: none;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+    }
 }
