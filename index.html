@@ -38,8 +38,10 @@
             <!-- sidenav -->
             <aside class="sidebar d-flex flex-column align-items-center bg-black vh-100 p-3"
                 style="width: 260px; min-width: 260px;" id="sidebar">
-                <img src="assets/me.jpg" alt="Logo" class="rounded-circle mt-3 border"
+
+                <img src="assets/me.jpg" alt="Logo" class="rounded-circle my-3"
                     style="width: 180px; height: 180px; object-fit: cover;">
+
                 <nav class="nav flex-column w-100 flex-grow-1 my-4 gap-2" id="sideNav">
                     <a class="nav-link p-2 rounded active" href="#homepage">Homepage</a>
                     <a class="nav-link p-2 rounded" href="#projects">Projects</a>
@@ -47,6 +49,7 @@
                     <a class="nav-link p-2 rounded" href="#experience">Experience</a>
                     <a class="nav-link p-2 rounded" href="#education">Education</a>
                 </nav>
+
                 <div class="w-100 border-top pt-2">
                     <div class="bg-dark text-white d-flex align-items-center justify-content-center py-3">
                         <div class="position-relative">
@@ -68,7 +71,8 @@
                         <i class="bi bi-list"></i>
                     </button>
                 </div>
-                <div class="px-5" data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="0" tabindex="0"
+
+                <div class="px-3 px-sm-5" data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="0" tabindex="0"
                     style="scroll-behavior: smooth;">
                     <section id="homepage" class="pt-5 mb-5" style="min-height: 100vh;">
                         <h1 class="text-white text-md-start mb-5">Home page</h1>
@@ -113,8 +117,15 @@
     </div>
 
 
+    <!-- [JQuery] -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- [Bootstrap JS] -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- [Custom JS] -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/indicator.js"></script>
     <script src="service-worker.js"></script>
 </body>
 

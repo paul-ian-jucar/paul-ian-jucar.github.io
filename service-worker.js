@@ -4,6 +4,7 @@ const ASSETS_TO_CACHE = [
     '/index.html',
     '/manifest.json',
     '/assets/js/app.js',
+    '/assets/js/indicator.js',
     '/assets/me.jpg',
     '/assets/logo.png',
     '/assets/favicon/favicon.svg',
@@ -13,7 +14,8 @@ const ASSETS_TO_CACHE = [
     'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.css',
     'https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap',
-    'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js'
+    'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js',
+    'https://code.jquery.com/jquery-3.7.1.min.js'
 ];
 
 // Install event - cache assets
