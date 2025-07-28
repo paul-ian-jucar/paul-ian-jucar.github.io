@@ -18,7 +18,6 @@ $(document).ready(function () {
         return false;
     });
 
-    // Mobile sidebar toggle functionalitydocument).ready(function () {
     // Mobile sidebar toggle functionality
     const $sidebar = $('#sidebar');
     const $sidebarOverlay = $('#sidebarOverlay');
@@ -52,9 +51,12 @@ $(document).ready(function () {
     });
 
     // Bootstrap ScrollSpy activation
-    const scrollSpy = new bootstrap.ScrollSpy($('.px-5')[0], {
-        target: '#sideNav',
-        offset: 0
-    });
+    const scrollSpyElement = $('.px-5')[0];
+    if (scrollSpyElement && bootstrap && bootstrap.ScrollSpy) {
+        const scrollSpy = new bootstrap.ScrollSpy(scrollSpyElement, {
+            target: '#sideNav',
+            offset: 0
+        });
+    }
 });
 
