@@ -25,11 +25,13 @@ $(document).ready(function () {
     function toggleSidebar() {
         $sidebar.toggleClass('show');
         $sidebarOverlay.toggleClass('show');
+        $sidebarOverlay.addClass('position-fixed top-0 start-0');
     }
 
     function closeSidebar() {
         $sidebar.removeClass('show');
         $sidebarOverlay.removeClass('show');
+        $sidebarOverlay.removeClass('position-fixed top-0 start-0');
     }
 
     // Sidebar toggle events
