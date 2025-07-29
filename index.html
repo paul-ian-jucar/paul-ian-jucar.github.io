@@ -371,10 +371,12 @@
     <!-- [Custom JS] -->
     <script src="assets/js/app.js"></script>
     <script src="assets/js/indicator.js"></script>
-    <script src="service-worker.js"></script>
 
     <!-- Tooltips -->
     <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
         $(function () {
             $('[data-bs-toggle="tooltip"]').tooltip();
         });
