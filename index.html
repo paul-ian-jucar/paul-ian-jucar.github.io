@@ -22,16 +22,17 @@
     <link rel="mask-icon" href="assets/favicon/favicon.svg" color="#0d6efd">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.css"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- [Animate] -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<body>
+<body style="overflow: hidden auto">
     <!-- Mobile sidebar overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
@@ -41,10 +42,10 @@
             <aside class="sidebar d-flex flex-column align-items-center bg-black vh-100 p-3"
                 style="width: 260px; min-width: 260px;" id="sidebar">
 
-                <img src="assets/me.jpg" alt="Profile Picture" class="rounded-circle my-3" width="180" height="180"
+                <img src="assets/me.jpg" alt="Profile Picture" class="rounded-circle my-3 animate__animated animate__backInLeft" width="180" height="180"
                     loading="eager" fetchpriority="high" style="object-fit: cover;">
 
-                <nav class="nav flex-column w-100 flex-grow-1 my-4 gap-2" id="sideNav">
+                <nav class="nav flex-column w-100 flex-grow-1 my-4 gap-2 animate__animated animate__backInLeft" id="sideNav">
                     <a class="nav-link p-2 rounded active" href="#homepage">Homepage</a>
                     <a class="nav-link p-2 rounded" href="#projects">Projects</a>
                     <a class="nav-link p-2 rounded" href="#skills">Skills</a>
@@ -52,21 +53,21 @@
                     <a class="nav-link p-2 rounded" href="#education">Education</a>
                 </nav>
 
-                <div class="w-100 border-top pt-2">
+                <div class="w-100 border-top pt-2 animate__animated animate__backInLeft">
                     <div class="bg-dark text-white d-flex align-items-center justify-content-center py-3">
                         <div class="position-relative">
                             <img src="assets/me.jpg" alt="Profile Picture Small" class="rounded-circle border mx-3"
                                 width="40" height="40" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="flex-grow-1">
-                            <div class="fw-semibold">Paul Ian Jucar</div>
-                            <div class="small" id="status-indicator"></div>
+                            <div class="fw-semibold mono">Paul Ian Jucar</div>
+                            <div class="small mono" id="status-indicator"></div>
                         </div>
                     </div>
                 </div>
             </aside>
 
-            <div class="col main-content bg-dark" style="min-height: 100vh;">
+            <div class="col main-content bg-dark">
                 <div class="d-flex justify-content-between align-items-center p-3 sticky-top bg-dark">
                     <!-- Mobile menu toggle button -->
                     <button class="btn btn-outline-light mobile-toggle d-md-none" type="button" id="sidebarToggle"
@@ -77,45 +78,71 @@
 
                 <div class="px-3 px-sm-5" data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="0" tabindex="0"
                     style="scroll-behavior: smooth;">
-                    <section id="homepage" class="pt-5 vh-100">
-                        <div class="row align-items-center mb-5">
+                    <section id="homepage" class="pt-5 responsive-vh d-flex flex-column justify-content-center">
+                        <div class="row align-items-center mb-5 animate__animated animate__backInLeft">
                             <div class="col-lg-8">
-                                <h1 class="text-white display-4 fw-bold mb-4">Full Stack Developer</h1>
-                                <p class="text-white-50 mb-4">Passionate about creating efficient, scalable, and
+                                <h1 class="text-white display-4 fw-bold mb-4">Web Developer</h1>
+                                <p class="text-white-50 mb-4">
+                                    Passionate about creating efficient, scalable, and
                                     user-friendly web applications. Specialized in modern web technologies and best
-                                    practices in software development.</p>
+                                    practices in software development.
+                                </p>
+
                                 <div class="d-flex gap-3">
-                                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                                    <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+                                    <button id="btn-cv-download">
+                                        <a href="img/files/Paul Ian Jucar.pdf" download="Paul Ian Jucar.pdf" class="text-decoration-none">
+                                            <span>Download CV</span>
+                                        </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row g-4 mb-5">
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="p-4 rounded bg-black bg-opacity-50 text-white">
-                                    <i class="bi bi-code-square fs-3 text-primary"></i>
-                                    <h3 class="h5 mb-3">Modern Development</h3>
-                                    <p class="mb-0 text-white-50">Building responsive and performant web
-                                        applications
-                                        using the latest technologies.</p>
+                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__backInLeft">
+                                <div class="p-4 rounded bg-black bg-opacity-50 text-center text-white">
+                                    <h6>Total Projects</h6>
+                                    <h1>5+</h1>
+                                    <small>Projects Completed</small>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <div class="p-4 rounded bg-black bg-opacity-50 text-white">
-                                    <i class="bi bi-brush fs-3 mb-3 text-primary"></i>
-                                    <h3 class="h5 mb-3">Clean Design</h3>
-                                    <p class="mb-0 text-white-50">Creating intuitive user interfaces with attention
-                                        to
-                                        detail and user experience.</p>
+                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__backInUp">
+                                <div class="p-4 rounded bg-black bg-opacity-50 text-center text-white">
+                                    <h6>Years of Experience</h6>
+                                    <h1>3 years</h1>
+                                    <small>Freelancing & Industry</small>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-12 col-lg-4">
-                                <div class="p-4 rounded bg-black bg-opacity-50 text-white">
-                                    <i class="bi bi-diagram-3 fs-3 mb-3 text-primary"></i>
-                                    <h3 class="h5 mb-3">Architecture</h3>
-                                    <p class="mb-0 text-white-50">Designing scalable solutions with focus on
-                                        maintainability and best practices.</p>
+
+                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__backInRight">
+                                <div class="p-4 rounded bg-black bg-opacity-50 text-center text-white">
+                                    <h6>Favorite Language</h6>
+                                    <h1>PHP</h1>
+                                    <small>till the end?</small>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto placeholder-glow placeholder-wave">
+                                <div class="p-4 rounded bg-black bg-opacity-50">
+                                    <h6 class="placeholder col-7">text</h6>
+                                    <h1 class="placeholder col-6">text</h1>
+                                    <small class="placeholder col-8">text</small>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto placeholder-glow placeholder-wave">
+                                <div class="p-4 rounded bg-black bg-opacity-50">
+                                    <h6 class="placeholder col-7">text</h6>
+                                    <h1 class="placeholder col-6">text</h1>
+                                    <small class="placeholder col-8">text</small>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto placeholder-glow placeholder-wave">
+                                <div class="p-4 rounded bg-black bg-opacity-50">
+                                    <h6 class="placeholder col-7">text</h6>
+                                    <h1 class="placeholder col-6">text</h1>
+                                    <small class="placeholder col-8">text</small>
                                 </div>
                             </div>
                         </div>
@@ -126,23 +153,32 @@
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <div class="card bg-black">
-                                    <img src="https://via.placeholder.com/600x400" class="card-img-top"
+                                    <img src="/assets/images/1.png" class="card-img-top h-100"
                                         alt="E-commerce Platform">
                                     <div class="card-body">
-                                        <h5 class="card-title text-white">E-commerce Platform</h5>
-                                        <p class="card-text text-white-50">A full-featured e-commerce platform built
-                                            with Laravel and Vue.js, featuring product management, cart
-                                            functionality, and payment integration.</p>
-                                        <a href="https://github.com/username/e-commerce" class="btn btn-outline-light"
-                                            target="_blank">
-                                            <i class="bi bi-github"></i> View Repository
-                                        </a>
+                                        <h5 class="card-title text-white">Employee Management System</h5>
+                                        <p class="card-text text-white-50">
+                                            Purpose of this project is to manage employee records efficiently.
+                                            It mainly focuses on file management and folder structure to keep
+                                            everything organized.
+                                        </p>
+
+                                        <div class="d-flex flex-wrap gap-2 mt-3">
+                                            <a href="javascript:void(0)"><span class="badge bg-dark rounded px-3 py-2"><i class="bi bi-fire me-1"></i> CodeIgniter 4</span></a>
+                                            <a href="javascript:void(0)"><span class="badge bg-dark rounded px-3 py-2"><i class="bi bi-bootstrap-fill me-1"></i> Bootstrap</span></a>
+                                            <a href="javascript:void(0)"><span class="badge bg-dark rounded px-3 py-2"><i class="bi bi-filetype-php me-1"></i> PHP</span></a>
+                                            <a href="javascript:void(0)"><span class="badge bg-dark rounded px-3 py-2"><i class="bi bi-database me-1"></i> MySQL</span></a>
+                                            <a href="javascript:void(0)"><span class="badge bg-dark rounded px-3 py-2"><i class="bi bi-filetype-html me-1"></i> HTML</span></a>
+                                            <a href="javascript:void(0)"><span class="badge bg-dark rounded px-3 py-2"><i class="bi bi-filetype-css me-1"></i> CSS</span></a>
+                                            <a href="javascript:void(0)"><span class="badge bg-dark rounded px-3 py-2"><i class="bi bi-filetype-js me-1"></i> JavaScript</span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="col-md-6">
                                 <div class="card bg-black">
-                                    <img src="https://via.placeholder.com/600x400" class="card-img-top"
+                                    <img src="/assets/images/1.png" class="card-img-top"
                                         alt="Task Management System">
                                     <div class="card-body">
                                         <h5 class="card-title text-white">Task Management System</h5>
@@ -158,7 +194,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="card bg-black">
-                                    <img src="https://via.placeholder.com/600x400" class="card-img-top"
+                                    <img src="/assets/images/1.png" class="card-img-top"
                                         alt="Portfolio Website">
                                     <div class="card-body">
                                         <h5 class="card-title text-white">Portfolio Website</h5>
@@ -174,7 +210,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="card bg-black">
-                                    <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Blog CMS">
+                                    <img src="/assets/images/1.png" class="card-img-top" alt="Blog CMS">
                                     <div class="card-body">
                                         <h5 class="card-title text-white">Blog CMS</h5>
                                         <p class="card-text text-white-50">A content management system for bloggers
@@ -306,53 +342,10 @@
 
                     <section id="education" class="pt-5 mb-5">
                         <h2 class="text-white mb-4">Education</h2>
-                        <div class="timeline position-relative">
-                            <div class="timeline-item row mb-4">
-                                <div class="col-md-6 offset-md-6">
-                                    <div class="card bg-black">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-white">Master of Computer Science</h5>
-                                            <h6 class="card-subtitle mb-2 text-primary">Tech University</h6>
-                                            <p class="text-white-50">2022 - 2024</p>
-                                            <p class="card-text text-white-50">Specialized in Software Engineering
-                                                and Web Technologies</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="timeline-item row mb-4">
-                                <div class="col-md-6">
-                                    <div class="card bg-black">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-white">Bachelor of Science in Information
-                                                Technology</h5>
-                                            <h6 class="card-subtitle mb-2 text-primary">State University</h6>
-                                            <p class="text-white-50">2018 - 2022</p>
-                                            <p class="card-text text-white-50">Major in Web Development and Database
-                                                Management</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="timeline-item row mb-4">
-                                <div class="col-md-6 offset-md-6">
-                                    <div class="card bg-black">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-white">Web Development Bootcamp</h5>
-                                            <h6 class="card-subtitle mb-2 text-primary">CodeCamp Academy</h6>
-                                            <p class="text-white-50">2017 - 2018</p>
-                                            <p class="card-text text-white-50">Intensive training in modern web
-                                                development technologies and practices</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </section>
                 </div>
 
-                <button class="btn btn-primary text-white rounded-circle" id="back-to-top" data-bs-toggle="tooltip"
-                    data-bs-placement="left" title="Back to Top" aria-label="Scroll back to top">
+                <button class="btn btn-primary text-white rounded-circle" id="back-to-top">
                     <i class="bi bi-arrow-up fs-5" aria-hidden="true"></i>
                 </button>
             </div>
@@ -364,6 +357,7 @@
 
     <!-- [JQuery] -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
     <!-- [Bootstrap JS] -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -372,14 +366,24 @@
     <script src="/assets/js/app.js"></script>
     <script src="/assets/js/indicator.js"></script>
 
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
     <!-- Tooltips -->
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js');
         }
+        
+        $(document).ready(function () {
+            $('html, body').scrollTop(0);
+        });
 
-        $(function () {
-            $('[data-bs-toggle="tooltip"]').tooltip();
+        tippy('#back-to-top', {
+            content: 'Back to top!',
+            placement: 'left',
+            arrow: true,
+            theme: 'material',
         });
     </script>
 </body>
