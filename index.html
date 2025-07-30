@@ -42,25 +42,26 @@
             <aside class="sidebar d-flex flex-column align-items-center bg-black vh-100 p-3"
                 style="width: 260px; min-width: 260px;" id="sidebar">
 
-                <img src="assets/me.jpg" alt="Profile Picture" class="rounded-circle my-3 animate__animated animate__backInLeft" width="180" height="180"
+                <img src="assets/me.jpg" alt="Profile Picture" class="rounded-circle my-3 animate__animated animate__fadeInLeft" width="180" height="180"
                     loading="eager" fetchpriority="high" style="object-fit: cover;">
 
-                <nav class="nav flex-column w-100 flex-grow-1 my-4 gap-2 animate__animated animate__backInLeft" id="sideNav">
+                <nav class="nav flex-column w-100 flex-grow-1 my-4 gap-2 animate__animated animate__fadeInLeft" id="sideNav">
                     <a class="nav-link p-2 rounded active" href="#homepage">Homepage</a>
                     <a class="nav-link p-2 rounded" href="#projects">Projects</a>
                     <a class="nav-link p-2 rounded" href="#skills">Skills</a>
                     <a class="nav-link p-2 rounded" href="#experience">Experience</a>
                     <a class="nav-link p-2 rounded" href="#education">Education</a>
+                    <a class="nav-link p-2 rounded" href="#contact-me">Contact</a>
                 </nav>
 
-                <div class="w-100 border-top pt-2 animate__animated animate__backInLeft">
+                <div class="w-100 border-top pt-2 animate__animated animate__fadeInLeft">
                     <div class="bg-dark text-white d-flex align-items-center justify-content-center py-3">
                         <div class="position-relative">
                             <img src="assets/me.jpg" alt="Profile Picture Small" class="rounded-circle border mx-3"
                                 width="40" height="40" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="flex-grow-1">
-                            <div class="fw-semibold mono">Paul Ian Jucar</div>
+                            <div class="fw-semibold mono">Paul Ian aJucar</div>
                             <div class="small mono" id="status-indicator"></div>
                         </div>
                     </div>
@@ -76,10 +77,9 @@
                     </button>
                 </div>
 
-                <div class="px-3 px-sm-5" data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="0" tabindex="0"
-                    style="scroll-behavior: smooth;">
+                <div class="px-3 px-sm-5 main-scroll-container" data-bs-spy="scroll" data-bs-target="#sideNav" data-bs-offset="100" tabindex="0">
                     <section id="homepage" class="pt-5 responsive-vh d-flex flex-column justify-content-center">
-                        <div class="row align-items-center mb-5 animate__animated animate__backInLeft">
+                        <div class="row align-items-center mb-5 animate__animated animate__fadeInLeft">
                             <div class="col-lg-8">
                                 <h1 class="text-white display-4 fw-bold mb-4">Web Developer</h1>
                                 <p class="text-white-50 mb-4">
@@ -99,14 +99,14 @@
                         </div>
 
                         <div class="row g-4 mb-5">
-                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__backInLeft">
+                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__fadeInLeft">
                                 <div class="p-4 rounded bg-black bg-opacity-50 text-center text-white">
                                     <h6>Total Projects</h6>
                                     <h1>5+</h1>
                                     <small>Projects Completed</small>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__backInUp">
+                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__fadeInUp">
                                 <div class="p-4 rounded bg-black bg-opacity-50 text-center text-white">
                                     <h6>Years of Experience</h6>
                                     <h1>3 years</h1>
@@ -114,7 +114,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__backInRight">
+                            <div class="col-sm-12 col-md-6 col-lg-4 animate__animated animate__fadeInRight">
                                 <div class="p-4 rounded bg-black bg-opacity-50 text-center text-white">
                                     <h6>Favorite Language</h6>
                                     <h1>PHP</h1>
@@ -122,7 +122,15 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto placeholder-glow placeholder-wave">
+                            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto placeholder-glow">
+                                <div class="p-4 rounded bg-black bg-opacity-50">
+                                    <h6 class="placeholder col-7">text</h6>
+                                    <h1 class="placeholder col-6">text</h1>
+                                    <small class="placeholder col-8">text</small>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto placeholder-wave">
                                 <div class="p-4 rounded bg-black bg-opacity-50">
                                     <h6 class="placeholder col-7">text</h6>
                                     <h1 class="placeholder col-6">text</h1>
@@ -137,12 +145,96 @@
                                     <small class="placeholder col-8">text</small>
                                 </div>
                             </div>
+                        </div>
+                    </section>
 
-                            <div class="col-sm-12 col-md-6 col-lg-4 mx-auto placeholder-glow placeholder-wave">
-                                <div class="p-4 rounded bg-black bg-opacity-50">
-                                    <h6 class="placeholder col-7">text</h6>
-                                    <h1 class="placeholder col-6">text</h1>
-                                    <small class="placeholder col-8">text</small>
+                    <section id="contact-me" class="pt-5 mb-5">
+                        <h2 class="text-white mb-4">Contact Me</h2>
+                        <div class="row">
+                            <div class="col-lg-8 mb-4 mb-lg-0">
+                                <div class="card bg-black border-0">
+                                    <div class="card-body p-3 p-md-4">
+                                        <p class="text-white-50 mb-4">
+                                            Have a project in mind or want to collaborate? I'd love to hear from you. 
+                                            Drop me a message and let's create something amazing together.
+                                        </p>
+                                        
+                                        <form id="contactForm">
+                                            <div class="mb-3">
+                                                <label for="name" class="form-label text-white fw-medium">Name</label>
+                                                <input type="text" class="form-control bg-dark border-secondary text-white rounded-2" 
+                                                       id="name" name="name" required>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label text-white fw-medium">Email</label>
+                                                <input type="email" class="form-control bg-dark border-secondary text-white rounded-2" 
+                                                       id="email" name="email" required>
+                                            </div>
+                                            
+                                            <div class="mb-4">
+                                                <label for="message" class="form-label text-white fw-medium">Message</label>
+                                                <textarea class="form-control bg-dark border-secondary text-white rounded-2" 
+                                                          id="message" name="message" rows="5" required style="resize: vertical;"></textarea>
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-primary px-4 py-2 w-100 w-sm-auto rounded-2 fw-medium">
+                                                <i class="bi bi-send me-2"></i>Send Message
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="card bg-black border-0 h-100">
+                                    <div class="card-body p-3 p-md-4">
+                                        <h5 class="text-white mb-4">Get in Touch</h5>
+                                        
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="bg-primary rounded-circle p-2 me-3 flex-shrink-0" style="width: 40px; height: 40px;">
+                                                <i class="bi bi-envelope text-white d-flex align-items-center justify-content-center h-100"></i>
+                                            </div>
+                                            <div class="flex-grow-1 min-w-0">
+                                                <p class="text-white-50 mb-1 small">Email</p>
+                                                <p class="text-white mb-0 text-break small lh-sm">contact@pauljucar.dev</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="bg-primary rounded-circle p-2 me-3 flex-shrink-0" style="width: 40px; height: 40px;">
+                                                <i class="bi bi-geo-alt text-white d-flex align-items-center justify-content-center h-100"></i>
+                                            </div>
+                                            <div class="flex-grow-1 min-w-0">
+                                                <p class="text-white-50 mb-1 small">Location</p>
+                                                <p class="text-white mb-0 small lh-sm">Philippines</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-flex align-items-start mb-4">
+                                            <div class="bg-primary rounded-circle p-2 me-3 flex-shrink-0" style="width: 40px; height: 40px;">
+                                                <i class="bi bi-clock text-white d-flex align-items-center justify-content-center h-100"></i>
+                                            </div>
+                                            <div class="flex-grow-1 min-w-0">
+                                                <p class="text-white-50 mb-1 small">Response Time</p>
+                                                <p class="text-white mb-0 small lh-sm">Within 24 hours</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <hr class="border-secondary my-4">
+                                        
+                                        <div class="d-flex gap-2 justify-content-center justify-content-lg-start">
+                                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="bi bi-linkedin"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="bi bi-twitter"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -228,77 +320,77 @@
 
                     <section id="skills" class="pt-5 mb-5">
                         <h2 class="text-white mb-4">Skills</h2>
-                        <div class="row g-4 text-center">
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                        <div class="row g-3" id="skillsContainer">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="html">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-filetype-html fs-2 text-warning"></i>
-                                    <p class="text-white-50 mt-2 mb-0">HTML5</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">HTML5</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="css">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-filetype-css fs-2 text-primary"></i>
-                                    <p class="text-white-50 mt-2 mb-0">CSS3</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">CSS3</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="javascript">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-filetype-js fs-2 text-warning"></i>
-                                    <p class="text-white-50 mt-2 mb-0">JavaScript</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">JavaScript</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="bootstrap">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-bootstrap fs-2 text-purple"></i>
-                                    <p class="text-white-50 mt-2 mb-0">Bootstrap</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">Bootstrap</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="php">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-filetype-php fs-2 text-info"></i>
-                                    <p class="text-white-50 mt-2 mb-0">PHP</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">PHP</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="git">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-git fs-2 text-danger"></i>
-                                    <p class="text-white-50 mt-2 mb-0">Git</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">Git</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="github">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-github fs-2 text-white"></i>
-                                    <p class="text-white-50 mt-2 mb-0">GitHub</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">GitHub</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="mysql">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-database fs-2 text-success"></i>
-                                    <p class="text-white-50 mt-2 mb-0">MySQL</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">MySQL</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="laravel">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-code-slash fs-2 text-danger"></i>
-                                    <p class="text-white-50 mt-2 mb-0">Laravel</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">Laravel</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="codeigniter">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-code-square fs-2 text-success"></i>
-                                    <p class="text-white-50 mt-2 mb-0">CodeIgniter</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">CodeIgniter</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="postman">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-send fs-2 text-primary"></i>
-                                    <p class="text-white-50 mt-2 mb-0">Postman</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">Postman</p>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="p-3 rounded bg-black">
+                            <div class="col-6 col-sm-4 col-md-3 col-lg-2 skill-item" data-skill="jquery">
+                                <div class="p-3 rounded bg-black text-center skill-card">
                                     <i class="bi bi-braces fs-2 text-info"></i>
-                                    <p class="text-white-50 mt-2 mb-0">jQuery</p>
+                                    <p class="text-white-50 mt-2 mb-0 skill-text">jQuery</p>
                                 </div>
                             </div>
                         </div>
@@ -361,6 +453,9 @@
 
     <!-- [Bootstrap JS] -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- [SortableJS] -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 
     <!-- [Custom JS] -->
     <script src="/assets/js/app.js"></script>

@@ -39,9 +39,26 @@ $(document).ready(function () {
     $sidebarOverlay.on('click', closeSidebar);
 
     // Close sidebar when clicking nav links on mobile
-    $('.nav-link').on('click', function () {
+    $('.nav-link').on('click', function (e) {
         if ($(window).width() < 768) {
             closeSidebar();
+        }
+        
+        // Handle smooth scrolling with offset for sticky header
+        const href = $(this).attr('href');
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const target = $(href);
+            if (target.length) {
+                // Calculate top bar height + 10px padding
+                const topBarHeight = $('.sticky-top').outerHeight() || 70; // fallback to 70px
+                const offset = topBarHeight + 1;
+                const targetPosition = target.offset().top - offset;
+                
+                $('html, body').animate({
+                    scrollTop: targetPosition
+                }, 600, 'easeOutCubic');
+            }
         }
     });
 
@@ -58,6 +75,66 @@ $(document).ready(function () {
         const scrollSpy = new bootstrap.ScrollSpy(scrollSpyElement, {
             target: '#sideNav',
             offset: 0
+        });
+    }
+
+    // Contact form functionality
+    $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        const $form = $(this);
+        const $submitBtn = $form.find('button[type="submit"]');
+        const originalBtnText = $submitBtn.html();
+        
+        // Get form data
+        const formData = {
+            name: $('#name').val().trim(),
+            email: $('#email').val().trim(),
+            message: $('#message').val().trim()
+        };
+        
+        // Basic validation
+        if (!formData.name || !formData.email || !formData.message) {
+            alert('Please fill in all fields.');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        // Disable submit button and show loading state
+        $submitBtn.prop('disabled', true).html('<i class="bi bi-hourglass-split me-2"></i>Sending...');
+        
+        // Simulate form submission (replace with actual submission logic)
+        setTimeout(() => {
+            // Success feedback
+            $submitBtn.html('<i class="bi bi-check-circle me-2"></i>Message Sent!');
+            $form[0].reset();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                $submitBtn.prop('disabled', false).html(originalBtnText);
+            }, 3000);
+            
+            // You can replace this with actual form submission to your backend
+            console.log('Form submitted:', formData);
+        }, 2000);
+    });
+
+    // Skills Sortable functionality
+    const skillsContainer = document.getElementById('skillsContainer');
+    if (skillsContainer) {
+        Sortable.create(skillsContainer, {
+            onStart: function() {
+                skillsContainer.classList.add('skills-dragging');
+            },
+            onEnd: function() {
+                skillsContainer.classList.remove('skills-dragging');
+            }
         });
     }
 });

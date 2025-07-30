@@ -117,6 +117,12 @@ h1, h2, h3, h4, h5, h6,
     color: #7952b3;
 }
 
+/* Sortable focus effect */
+.skills-dragging .skill-item:not(.sortable-chosen) {
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+}
+
 
 @media (max-width: 767.98px) {
     .timeline::before {
@@ -198,3 +204,9 @@ h1, h2, h3, h4, h5, h6,
     min-height: 100vh;
   }
 }
+
+/* Main content scroll behavior */
+.main-scroll-container {
+    scroll-behavior: smooth;
+}
+
